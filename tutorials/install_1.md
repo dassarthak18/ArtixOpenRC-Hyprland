@@ -33,10 +33,13 @@ The ```services``` command shows the list of wifi networks available to connect 
 	> connect <service id>
 	> quit
 
-I can enter the following command again to verify that I'm connected to the internet:
+I can enter the following command again (or simply run a ```ping```) to verify that I'm connected to the internet:
 
 ```bash script
 ip a
+```
+```bash script
+ping https://archlinux.org/
 ```
 
 Now it's time to [partition the disk](install_2.md).
