@@ -1,6 +1,6 @@
 # Partitioning the Disk
 
-Artix provides the disk partitioning tool ```cfdisk``` out of the box for creating a GPT partition table, and I personally find it to be more intuitive than, say, [GParted](https://gparted.org/). The documentation on RHEL 8 is a good introduction to partitions in general, and is definitely a great read. In particular, there is a table that serves as a useful guide for [how much swap space to allocate](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/managing_storage_devices/getting-started-with-swap_managing-storage-devices#recommended-system-swap-space_getting-started-with-swap):
+Artix provides the disk partitioning tool ```cfdisk``` out of the box for creating a GPT (GUID partition table, not the generative AI models), and I personally find it to be more intuitive than, say, [GParted](https://gparted.org/). The documentation on RHEL 8 is a good introduction to partitions in general, and is definitely a great read. In particular, there is a table that serves as a useful guide for [how much swap space to allocate](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/managing_storage_devices/getting-started-with-swap_managing-storage-devices#recommended-system-swap-space_getting-started-with-swap):
 
 | Amount of RAM | Recommended swap | Recommended swap if allowing for hibernation |
 | -------- | ------- | ------- |
