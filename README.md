@@ -1,18 +1,23 @@
 # Artix-OpenRC + Hyprland
-Installation guide and config files for my artix-openrc + hyprland setup, for posterity's sake and in case I fuck up.
+Installation guide and config files for my artix-openrc + hyprland setup, for posterity's sake and in case I fuck up. As it turns out, I did fuck up quite a few times attempting to dual boot my existing install with [FreeBSD](https://www.freebsd.org/) + [Windowmaker](https://www.windowmaker.org/), and learned a couple of things the hard way:
+
+1. Always install BSD first. BSD's swap system can and will interfere with Linux's, and besides, you don't have to manually configure grub post-install because Linux's grub will detect the existing BSD install anyway.
+2. BSD is hard, and wildly different from Linux. There is no ```sudo``` privileges for you, you spoilt brat.
+
+So naturally, I dropped the idea (rather, shelved it for some other day).
 
 # Introduction
 This setup was installed on my Thinkpad X250 with Intel i7-5600U (4 cores @ 3.2 GHz) and Intel HD Graphics 5500, 8GB RAM and 256GB SSD.
 
-Like every other Linux installation (unless you are a Gentoo guy) the process begins with visiting the [official website](https://artixlinux.org/download.php) and downloading the image file of your choice. In my case, it was ``artix-base-openrc-20240823-x86_64.iso``. The reason for choosing an Arch-based distro was that I wanted a minimal setup that I could customize to my heart's extent and that would do justice to this dated hardware. The reason for going with the base install of Artix was that ``openrc`` as an init-system (the first process started during booting of an OS, and the last process to terminate before shutdown) is more lightweight and fast as compared to Arch's ``systemd`` - which has its [fair share of criticisms](https://www.youtube.com/watch?v=o_AIw9bGogo).
+Like every other Linux installation (unless you are a Gentoo guy) the process begins with visiting the [official website](https://artixlinux.org/download.php) and downloading the image file of your choice. In my case, it was ``artix-base-openrc-20240823-x86_64.iso``. The reason for choosing an Arch-based distro was that I wanted a minimal setup that I could customize to my heart's content and that would do justice to this dated hardware. The reason for going with the base install of Artix was that ``openrc`` as an init-system (the first process started during booting of an OS, and the last process to terminate before shutdown) is more lightweight and fast as compared to Arch's ``systemd`` - which has its [fair share of criticisms](https://www.youtube.com/watch?v=o_AIw9bGogo).
 
 <div align="center">
   <a href="https://www.youtube.com/watch?v=o_AIw9bGogo"><img src="https://img.youtube.com/vi/o_AIw9bGogo/0.jpg" alt="Benno Rice - The Tragedy of systemd"></a>
 </div>
 
-The next logical step then is to create a bootable USB tool using any tool you get your hands on - Rufus and [balenaEtcher](https://etcher.balena.io/) are popular options. I used to be a balenaEtcher user, but have eventually shifted to [Ventoy](https://www.ventoy.net/en/index.html). Ventoy offers several advantages - first, it creates a multi-bootable USB (that is, you can flash several disk images of your choice in a single USB and boot into the one you want to install), and secondly, adding a new ISO to the mix is as easy as copying it into the USB drive. No need for re-doing the process over and over again.
+The next logical step then is to create a bootable USB tool using any tool you get your hands on - Rufus and [balenaEtcher](https://etcher.balena.io/) are popular options. I used to be a balenaEtcher user, but have eventually shifted to [Ventoy](https://www.ventoy.net/en/index.html). Ventoy offers several advantages - first, it creates a multi-bootable USB (that is, you can flash several disk images of your choice in a single USB and boot into the one you want to install), and secondly, adding a new ISO (or removing an existing one!) to the mix is as easy as copying it into the USB drive. No need for re-doing the process over and over again.
 
-Anyway, then you boot into the system by accessing the boot menu in the BIOS - in my case, I had to press the F12 key, select my USB drive as the boot option, and then select the Artix iso to boot into. Make sure to have secure boot option disabled, and UEFI mode enabled. Once you're inside the live system, the real fun begins. Login as the root - the default password is `artix'. If the font is too small to be legible, the size can be doubled by using the command
+Anyway, then you boot into the system by accessing the boot menu in the BIOS - in my case, I had to press the F12 key, select my USB drive as the boot option, and then select the Artix ISO to boot into. Make sure to have secure boot option disabled, and UEFI mode enabled. Once you're inside the live system, the real fun begins. Login as the root - the default password is `artix'. If the font is too small to be legible, the size can be doubled by using the command
 
 ```bash
 setfont -d
