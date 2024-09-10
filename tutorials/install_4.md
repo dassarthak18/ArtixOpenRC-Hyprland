@@ -14,7 +14,7 @@ Then, we must configure the locale (language and keyboard layout) of the system.
 ```bash script
 nano /etc/locale.gen
 locale-gen
-nano /etc/locale.conf (LANG=en_US.UTF-8)
+nano /etc/locale.conf
 ```
 
 Next, we set the hostname of the system by writing the hostname of our choice (I set mine to 'artix') to ```/etc/hostname``` and configuring the ```/etc/hosts``` file:
