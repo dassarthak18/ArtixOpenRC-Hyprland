@@ -38,3 +38,5 @@ With that out of the way, let's get into the nitty-gritty of the installation pr
 ## [Partitioning the Disk](tutorials/install_2.md)
 
 ## [Installing the System](tutorials/install_3.md)
+
+## [Configuring the System](tutorials/install_4.md)
