@@ -36,3 +36,5 @@ With that out of the way, let's get into the nitty-gritty of the installation pr
 ## [Connecting to the Internet](tutorials/install_1.md)
 
 ## [Partitioning the Disk](tutorials/install_2.md)
+
+## [Installing the System](tutorials/install_3.md)
