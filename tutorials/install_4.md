@@ -1,6 +1,6 @@
 # Configuring the System
 
-Now it is time to configure our system. The first thing to do is set up the local timezone and sync it with the system clock:
+Now it is time to configure our system. The first thing to do is set up the localtime and sync it with the system clock:
 
 ```bash script
 ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
@@ -9,15 +9,28 @@ hwclock --systohc
 
 Fill in the appropriate region and city in the command - in my case it is ```Asia/Kolkata```; in your case you can refer to [the tz database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) and set up your localtime accordingly.
 
-nano /etc/locale.gen (uncomment en_US.UTF-8 UTF-8)
+Then, we must configure the locale (language and keyboard layout) of the system. In order to do that, we edit the ```locale.gen``` file in the ```/etc/``` directory and uncomment the suitable locale (```en_US.UTF-8 UTF-8``` in my case), and generate the locale accordingly. We also set the language in the ```locale.conf``` file in the same directory by writing ```LANG=en_US.UTF-8```, or whatever it is in your case:
+
+```bash script
+nano /etc/locale.gen
 locale-gen
 nano /etc/locale.conf (LANG=en_US.UTF-8)
-nano /etc/hostname (hostname)
-nano /etc/hosts
+```
 
-127.0.0.1	localhost
-::1		localhost
-127.0.1.1	hostname.localdomain	hostname
+Next, we set the hostname of the system by writing the hostname of our choice (I set mine to 'artix') to ```/etc/hostname``` and configuring the ```/etc/hosts``` file:
+
+```bash script
+nano /etc/hostname
+nano /etc/hosts
+```
+
+The configuration of the ```etc/hosts``` file is as follows:
+
+	127.0.0.1  localhost
+	::1        localhost
+	127.0.1.1  <hostname>.localdomain  <hostname>
+
+where ```<hostname>``` is the hostname of our device.
 
 passwd
 
