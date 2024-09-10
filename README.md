@@ -24,7 +24,7 @@ This can be undone by a simple
 setfont
 ```
 
-With that out of the way, let's get into the nitty-gritty of the installation process. In the rest of the tutorial, for the most part, I use the terms 'I' and 'my' - this is because these steps were jotted down more as a journal to the self than for the purpose of dissemination, but here we are.
+With that out of the way, let's get into the nitty-gritty of the installation process. In the rest of the tutorial, for the most part, I use the terms 'I' and 'my' - this is because these steps were jotted down more as a journal to self than for the purpose of dissemination, but here we are.
 
 # Installation of Artix
 
