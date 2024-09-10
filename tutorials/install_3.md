@@ -12,7 +12,7 @@ Next, we install our system to the ```/mnt``` directory using the ```basestrap``
 basestrap /mnt base base-devel openrc elogind-openrc linux linux-firmware nano intel-ucode
 ```
 
-The packages ```base``` and ```base-devel``` provide the core of the tools and utilities Artix uses, while ```openrc``` and ```elogind``` make up the init-system of the install. ```linux``` and ```linux-firmware``` provide the Linux kernel and drivers, while ```nano``` is my text editor of choice which will come in handy in the next step when I [configure the system](install_4.md). You can use ```vim``` instead if you prefer, but I find it unnecessarily complicated.
+The packages ```base``` and ```base-devel``` provide the core of the tools and utilities Artix uses, while ```openrc``` and ```elogind``` make up the init-system of the install. ```linux``` and ```linux-firmware``` provide the Linux kernel (the core program that manages the fundamentals of the OS) and firmware (programs providing instructions for the device's basic operations), while ```nano``` is my text editor of choice which will come in handy in the next step when I [configure the system](install_4.md). You can use ```vim``` instead if you prefer, but I find it unnecessarily complicated.
 
 Last but not the least, ```intel-ucode``` is a microcode that provides security and bug fixes for the CPU, ensuring system stability and security. If your device uses an AMD processor, you use ```amd-ucode``` instead.
 
