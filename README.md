@@ -41,7 +41,9 @@ With that out of the way, let's get into the nitty-gritty of the installation pr
 
 ## [Configuring the System](tutorials/install_4.md)
 
-We are done with the install, so as a duty-bound citizen of the Linux community, I can now execute the following commands:
+## Post-Installation
+
+We are done with the installation, so as a duty-bound citizen of the Linux community, I can now execute the following commands:
 
 ```bash script
 pacman -S neofetch
