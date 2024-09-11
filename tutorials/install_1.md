@@ -28,7 +28,7 @@ connmanctl
 	> agent on
 	> services
 
-The ```services``` command shows the list of wifi networks available to connect to. I choose my wifi name and enter the service id in the following command. The service id may be long and confusing, so I use the autocomplete feature by pressing TAB. Ienter the passphrase (of course there is a passphrase) and ```connmanctl``` confirms that I'm connected. Now, I can exit the utility.
+The ```services``` command shows the list of wifi networks available to connect to. I choose my wifi name and enter the service id in the following command. The service id may be long and confusing, so I use the autocomplete feature by pressing TAB. I enter the passphrase (of course there is a passphrase) and ```connmanctl``` confirms that I'm connected. Now, I can exit the utility.
 
 	> connect <service id>
 	> quit
