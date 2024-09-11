@@ -55,4 +55,4 @@ A screenshot where a screenshot is due:
 
 ![neofetch](screenshots/IMG_8387.jpeg)
 
-As you can see, the system is taking up only 158MiB of RAM. And now I can gleefully say: I use Artix, btw.
+As you can see, the system is taking up only 158MiB of RAM. This is the part where I gleefully say: I use Artix, btw.
