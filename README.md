@@ -51,6 +51,6 @@ lsblk
 
 A screenshot where a screenshot is due:
 
-![neofetch](screenshots/IMG_8387jpeg)
+![neofetch](screenshots/IMG_8387.jpeg)
 
 And now I can gleefully say: I use Artix, btw.
