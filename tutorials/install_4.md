@@ -60,7 +60,7 @@ grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-We also add the network, SSH, bluetooth and printer services to our init-system to autostart on boot, that is, at the default runlevel. In ```systemd``` we use the command ```systemctl``` for configuring daemons (background processes; their names usually end with a _d_). But in our case we are using ```openrc```, so our command will be ```rc-update```. Note that other init-systems shipped with Artix (namely ```runit```, ```dinit``` and ```s6```) will vary in their commands for configuring daemons, although the rest of the install process remains mostly the same.
+We also add the network, SSH, bluetooth and printer services to our init-system to autostart on boot, that is, at the default runlevel. In ```systemd``` we use the command ```systemctl``` for configuring daemons (background processes; their names usually end with a _d_). But in our case we are using ```openrc```, so our command will be ```rc-update```. Note that other init-systems shipped with Artix (namely ```runit```, ```dinit``` and ```s6```) will vary in their commands for configuring daemons, although the rest of the install and configuration process remains mostly the same.
 
 ```bash script
 rc-update add NetworkManager default
@@ -69,7 +69,7 @@ rc-update add bluetoothd default
 rc-update add cupsd default
 ```
 
-We are done with out configuration. Now it only remains to add users to our system if we so choose. This is done using the ```useradd``` command. The flag ```m``` creates a home directory for the user while the flag ```G``` adds the user to a specified group which, in this case, is the ```wheel``` (the group of users with sudo privileges). We can also set a password for an user.
+We are done with out configuration. Now it only remains to add users to our system if we so choose. This is done using the ```useradd``` command. The flag ```m``` creates a home directory for the user while the flag ```G``` adds the user to a specified group which, in this case, is the ```wheel``` (the group of users with ```sudo``` privileges). We can also set a password for an user.
 
 ```bash script
 useradd -mG wheel <username>
