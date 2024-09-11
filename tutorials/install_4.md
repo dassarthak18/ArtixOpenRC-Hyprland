@@ -32,7 +32,11 @@ The configuration of the ```etc/hosts``` file is as follows:
 
 where ```<hostname>``` is the hostname of our device.
 
+We can then set the password for the super user (root):
+
+```bash script
 passwd
+```
 
 pacman -S grub efibootmgr networkmanager networkmanager-openrc network-manager-applet wpa_supplicant dialog os-prober dosfstools linux-headers bluez bluez-openrc bluez-utils cups cups-openrc openssh openssh-openrc xf86-video-intel (or, xf86-video-amdgpu/ nvidia nvidia-utils)
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
