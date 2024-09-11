@@ -2,7 +2,7 @@
 Installation guide and config files for my artix-openrc + hyprland setup, for posterity's sake and in case I fuck up. As it turns out, I did fuck up quite a few times attempting to dual boot my existing install with [FreeBSD](https://www.freebsd.org/) + [Windowmaker](https://www.windowmaker.org/), and learned a couple of things the hard way:
 
 1. Always install BSD first. BSD's swap system can and will interfere with Linux's, and besides, you don't have to manually configure grub post-install because Linux's grub will detect the existing BSD install anyway.
-2. BSD is hard, and wildly different from Linux. There is no ```sudo``` privileges for you, you spoilt brat.
+2. BSD is hard, and wildly different from Linux. There are no ```sudo``` privileges for you, you spoilt brat.
 
 So naturally, I dropped the idea (rather, shelved it for some other day).
 
