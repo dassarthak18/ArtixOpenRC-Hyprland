@@ -17,7 +17,7 @@ Like every other Linux installation (unless you are a Gentoo guy) the process be
 
 The next logical step then is to create a bootable USB installer using any tool you get your hands on - Rufus and [balenaEtcher](https://etcher.balena.io/) are popular options. I used to be a balenaEtcher user, but have eventually shifted to [Ventoy](https://www.ventoy.net/en/index.html). Ventoy offers several advantages - first, it creates a multi-bootable USB (that is, you can flash several disk images of your choice in a single USB and boot into the one you want to install), and secondly, adding a new ISO (or removing an existing one!) to the mix is as easy as copying (or deleting) it into the USB drive. No need for re-doing the process over and over again.
 
-Anyway, then you boot into the system by accessing the boot menu in the BIOS - in my case, I had to press the F12 key, select my USB drive as the boot option, and then select the Artix ISO to boot into. Make sure to have secure boot option disabled, and UEFI mode enabled. Once you're inside the live system, the real fun begins. Login as the root - the default password is `artix'. If the font is too small to be legible, the size can be doubled by using the command
+Anyway, then you boot into the system by accessing the boot menu in the BIOS - in my case, I had to press the F12 key, select my USB drive as the boot option, and then select the Artix ISO to boot into. Make sure to have secure boot option disabled, and UEFI mode enabled. Once you're inside the live system, the real fun begins. Login as the root - the default password is 'artix'. If the font is too small to be legible, the size can be doubled by using the command
 
 ```bash
 setfont -d
