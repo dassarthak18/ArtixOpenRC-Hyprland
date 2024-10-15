@@ -227,3 +227,5 @@ Each new pair adds more terms to the polynomials, but the process follows from t
 If your answer follows this pattern of solving recurrence relations starting from the trivial critical point $$(1,1)$$ and generating higher-degree polynomials, then you are on the right track.
 
 Let me know if your solution matches this! If you need further clarification, feel free to ask!
+
+### **NOTE.** the values of a, b, and c are arbitrary constants that arise during the recursive process. These constants parameterize the polynomials and represent the degrees of freedom in the system.
