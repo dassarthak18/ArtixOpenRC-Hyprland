@@ -1,4 +1,6 @@
-![image](imgMukhin.jpeg)
+![Theory PDF here.](Mukhin.md)
+
+![image](imgMukhin.jpg)
 
 # Theory
 
