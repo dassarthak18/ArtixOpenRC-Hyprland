@@ -1,3 +1,5 @@
+![image](imgMukhin.jpeg)
+
 # Theory
 
 The document appears to describe a method for constructing critical points of a master function $$\Phi$$ and explores how polynomials $$\boldsymbol{y} = (y_1(x), \dots, y_r(x))$$ represent these points. It relates to a population of such critical points, constructed using a process involving recurrence relations between the polynomials. Here's an overview of the key concepts:
