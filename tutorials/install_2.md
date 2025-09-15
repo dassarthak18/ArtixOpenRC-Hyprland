@@ -14,9 +14,9 @@ For me, it was a 200M partition of EFI system (the Extensible Firmware Interface
 In case the new partition table does not show up immediately, run the following commands to refresh and optionally turn off the swap before further configuration (assuming ```sda``` is indeed your disk; verify this first):
 
 ```bash script
+swapoff -a
 partx -d /dev/sda
 partx -a /dev/sda
-swapoff -a
 ```
 
 Once the partition table is created, it then remains to format the partitions and mount the drives to proceed with the actual installation process. Assuming the EFI, swap and root partitions are labelled ```sda1```, ```sda2``` and ```sda3``` respectively, we proceed with the following commands (make sure to check out your partition labels using ```lsblk``` to prevent messing up):
