@@ -51,7 +51,7 @@ The packages ```grub``` and ```efibootmgr``` serve as the bootloader for our sys
 
 The packages ```networkmanager```, ```networkmanager-openrc```, ```network-manager-applet```and ```wpa_supplicant``` provide the framework and interface for network connectivity, while the packages ```openssh``` and ```openssh-openrc``` provide support for remote login via the SSH protocol. The packages ```bluez```, ```bluez-openrc``` and ```bluez-utils``` provide bluetooth support, while the packages ```cups``` and ```cups-openrc``` provide support for printers and scanners.
 
-Finally, ```mesa```, ```mesa-demos``` provides OpenGL/Vulkan rendering and ```xf86-video-intel``` provides plug-and-play drivers for Intel GPU, which is the case for my device. If your device has an AMD GPU, install the package ```xf86-video-amdgpu``` instead. Alternatively, if your device has an Nvidia GPU, you will need the packages ```nvidia``` and ```nvidia-utils```.
+Finally, ```mesa``` and ```mesa-demos``` provides OpenGL/Vulkan rendering, while ```xf86-video-intel``` provides plug-and-play drivers for Intel GPU, which is the case for my device. If your device has an AMD GPU, install the package ```xf86-video-amdgpu``` instead. Alternatively, if your device has an Nvidia GPU, you will need the packages ```nvidia``` and ```nvidia-utils```.
 
 Now that we have installed ```grub```, it is time to set up GRUB as our bootloader:
 
