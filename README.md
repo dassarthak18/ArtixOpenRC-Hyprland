@@ -211,7 +211,7 @@ grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-We also add the network, SSH, bluetooth, printer and message bus services to our init-system to autostart on boot, that is, at the default runlevel. In ```systemd``` we use the command ```systemctl``` for configuring daemons (background processes; their names usually end with a _d_). But in our case we are using ```openrc```, so our command will be ```rc-update```. Note that other init-systems shipped with Artix (namely ```runit```, ```dinit``` and ```s6```) will vary in their commands for configuring daemons, although the rest of the installation and configuration process remains mostly the same. Note that ```pipewire``` and ```wireplumber``` are not system services in ```openrc```. Instead, they run per-user when we log into a graphical session such as Hyprland or GNOME.
+We also add the network, SSH, bluetooth, printer and message bus services to our init-system to autostart on boot, that is, at the default runlevel. In ```systemd``` we use the command ```systemctl``` for configuring daemons (background processes; their names usually end with a _d_). But in our case we are using ```openrc```, so our command will be ```rc-update```. Note that other init-systems shipped with Artix (namely ```runit```, ```dinit``` and ```s6```) will vary in their commands for configuring daemons, although the rest of the installation and configuration process remains mostly the same. Also note that ```pipewire``` and ```wireplumber``` are not system services in ```openrc```. Instead, they run per-user when we log into a graphical session such as Hyprland or GNOME.
 
 ```bash script
 rc-update add NetworkManager default
