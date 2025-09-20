@@ -244,7 +244,7 @@ reboot
 
 Upon booting into the system for the first time, we can connect to a wifi network of our choice using the ```nmtui``` command, which is an intuitive TUI (terminal user interface) for the ```NetworkManager```. The system will remember our preference, and autoconnect to that wifi network on login.
 
-### Post-Installation
+## Post-Installation
 
 We are done with the installation, so as a duty-bound citizen of the Linux community, I can now execute the following commands:
 
