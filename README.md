@@ -35,7 +35,7 @@ With that out of the way, let's get into the nitty-gritty of the installation pr
 
 ## Connecting to the Internet
 
-If you're using an ethernet connection, this step is a pass. You can move on to the [next section](install_2.md).
+If you're using an ethernet connection, this step is a pass. You can move on to the next section.
 
 If you're like me, and don't have access to an ethernet cable, you need to use wifi. This part deals with exactly how to do that. Before that however, check whether your wifi card is supported, or your device has a wifi card at all. If not, I'm afraid I can't help you much. Get a graphical installation image instead of a base ISO. As the [Artix wiki](https://wiki.artixlinux.org/Main/Installation) puts it,
 
