@@ -6,6 +6,17 @@ Installation guide and config files for my artix-openrc + Hyprland setup, for po
 
 So naturally, I dropped the idea (rather, shelved it for some other day).
 
+# Table of Contents
+
+- [Introduction](#introduction)
+- [Installation of Artix](#installation-of-artix)
+  - [Connecting to the Internet](#connecting-to-the-internet)
+  - [Partitioning the Disk](#partitioning-the-disk)
+  - [Installing the System](#installing-the-system)
+  - [Configuring the System](#configuring-the-system)
+  - [Post-Installation](#post-installation)
+- [Installation of Hyprland](#installation-of-hyprland)
+
 # Introduction
 This setup was installed on my Thinkpad X250 with Intel i7-5600U (4 cores @ 3.2 GHz) and Intel HD Graphics 5500, 8GB RAM and 256GB SSD.
 
@@ -271,3 +282,5 @@ play -n synth 1 sine 440
 ```
 
 If we hear a beep sound, we should be fine.
+
+# Installation of Hyprland
