@@ -263,7 +263,7 @@ fastfetch
 lsblk
 ```
 
-We also test that the audio services are in place using [SoX](https://github.com/chirlu/sox):
+We can also verify if the audio services are in place using [SoX](https://github.com/chirlu/sox):
 
 ```bash script
 sudo pacman -S sox
