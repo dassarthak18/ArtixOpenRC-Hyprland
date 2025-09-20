@@ -221,6 +221,15 @@ rc-update add cupsd default
 rc-update add dbus default
 ```
 
+Upon first login post-install, we will make sure to add the following:
+
+```bash script
+pgrep -x pipewire >/dev/null || pipewire &
+pgrep -x wireplumber >/dev/null || wireplumber &
+```
+
+to ```~/.bash_profile``` to make sure the audio services autostart on login.
+
 We are done with out configuration. Now it only remains to add users to our system if we so choose. This is done using the ```useradd``` command. The flag ```m``` creates a home directory for the user while the flag ```G``` adds the user to a specified group which, in this case, is the ```wheel``` (the group of users with ```sudo``` privileges). We can also set a password for an user.
 
 ```bash script
@@ -249,7 +258,16 @@ Upon booting into the system for the first time, we can connect to a wifi networ
 We are done with the installation, so as a duty-bound citizen of the Linux community, I can now execute the following commands ([fastfetch](https://github.com/fastfetch-cli/fastfetch) replaces the now depreciated neofetch):
 
 ```bash script
-pacman -S fastfetch
+sudo pacman -S fastfetch
 fastfetch
 lsblk
 ```
+
+We also test that the audio services are in place using [SoX](https://github.com/chirlu/sox):
+
+```bash script
+sudo pacman -S sox
+play -n synth 1 sine 440
+```
+
+If we hear a beep sound, we should be fine.
