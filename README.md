@@ -246,16 +246,10 @@ Upon booting into the system for the first time, we can connect to a wifi networ
 
 ## Post-Installation
 
-We are done with the installation, so as a duty-bound citizen of the Linux community, I can now execute the following commands:
+We are done with the installation, so as a duty-bound citizen of the Linux community, I can now execute the following commands ([fastfetch](https://github.com/fastfetch-cli/fastfetch) replaces the now depreciated neofetch):
 
 ```bash script
-pacman -S neofetch
-neofetch
+pacman -S fastfetch
+fastfetch
 lsblk
 ```
-
-A screenshot where a screenshot is due:
-
-![neofetch](screenshots/IMG_8387.jpeg)
-
-As you can see, the system is taking up only 158MiB of RAM. This is the part where I gleefully say: I use Artix, btw.
