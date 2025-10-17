@@ -121,7 +121,7 @@ mount /dev/sda1 /mnt/boot/efi
 
 Once done, we verify the final partition table using ```lsblk``` and proceed to install the system.
 
-My final partition table was a 200M FAT32 partition for EFI, an 8G Linux swap partition (after all that talk), and a 207.4G ext4 partition for the root.
+My final partition table was a 300M FAT32 partition for EFI, an 16G Linux swap partition, and a 222.2G ext4 partition for the root.
 
 ## Installing the System
 
