@@ -20,6 +20,7 @@ So naturally, I dropped the idea (rather, shelved it for some other day).
   - [Configuring Alacritty](#configuring-alacritty)
   - [Essential Software](#essential-software)
   - [Notifications and App Launcher](#notifications-and-app-launcher)
+  - [Setting Up Hyprland](#setting-up-hyprland)
 
 # Introduction
 This setup was installed on my Thinkpad X250 with Intel i7-5600U (4 cores @ 3.2 GHz) and Intel HD Graphics 5500, 8GB RAM and 256GB SSD.
@@ -328,10 +329,10 @@ cp -r ArtixOpenRC-Hyprland/dotfiles/alacritty ~/.config/alacritty
 
 ## Essential Software
 
-Any modern OS requires certain essential software for productivity - at the very least a file manager, a browser and an image viewer. Text editor is also essential software, but more on that later. Our tools of choice are [``nnn``](https://github.com/jarun/nnn) as the file manager, [Brave](https://brave.com/) as the browser, ``feh`` as the image viewer and ``grim`` + ``slurp`` for screenshotting. We can install most of them (except Brave) as simply as:
+Any modern OS requires certain essential software for productivity - at the very least a file manager, a browser and an image viewer. Text editor is also essential software, but more on that later. Our tools of choice are [``nnn``](https://github.com/jarun/nnn) as the file manager, [Brave](https://brave.com/) as the browser, ``feh`` as the image viewer and ``grim``, ``slurp``, ``wl-clipboard`` for screenshotting. We can install most of them (except Brave) as simply as:
 
 ```bash script
-sudo pacman -S nnn feh grim slurp
+sudo pacman -S nnn feh grim slurp wl-clipboard
 ```
 
 Brave, however, is not installable via Pacman. We must fetch and build it directly from the [Arch User Repository (AUR)](https://aur.archlinux.org/):
@@ -418,4 +419,4 @@ Now comes the moment of truth. To check if everything is in place, run the follo
 
 ``hyprland``
 
-If all's well, then we can move on to the next steps.
+If all's well, we can move on to the next steps.
