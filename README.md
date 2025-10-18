@@ -296,4 +296,10 @@ This installs not only Waybar, but also
 * ``htop`` which is our system monitor of choice, and
 * ``hyprlock`` which is the screen locker for Hyprland.
 
-My Waybar config file is provided in ``dotfiles/waybar/config.jsonc``. Clone the repository and move the config file to ``~/.config/waybar/config.jsonc``.
+My Waybar config file is provided in ``dotfiles/waybar/config.jsonc``. Clone the repository and copy the config file to ``~/.config/waybar/config.jsonc`` as follows:
+
+```bash script
+sudo pacman -S git
+git clone https://github.com/dassarthak18/ArtixOpenRC-Hyprland.git
+cp ArtixOpenRC-Hyprland/dotfiles/waybar/config.jsonc ~/.config/waybar/config.jsonc
+```
