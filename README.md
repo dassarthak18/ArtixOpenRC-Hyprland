@@ -228,14 +228,14 @@ rc-update add cupsd default
 rc-update add dbus default
 ```
 
-Upon first login post-install, we will make sure to run the following commands to set up the audio services to run on start-up:
+Upon first login post-install, we will make sure to run the following commands:
 
 ```bash script
 rc-update add pipewire default --user
 rc-update add wireplumber default --user
 ```
 
-to ```~/.bash_profile``` to make sure the audio services autostart on login.
+and reboot to make sure the audio services autostart on login.
 
 We are done with out configuration. Now it only remains to add users to our system if we so choose. This is done using the ```useradd``` command. The flag ```m``` creates a home directory for the user while the flag ```G``` adds the user to a specified group which, in this case, is the ```wheel``` (the group of users with ```sudo``` privileges). We can also set a password for an user.
 
