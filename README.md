@@ -336,6 +336,12 @@ Any modern OS requires certain essential software for productivity - at the very
 sudo pacman -S nnn feh grim slurp wl-clipboard
 ```
 
+The config for ``feh`` is provided in ``dotfiles/mimeapps.list``, which can be copied to ``~/.config/mimeapps.list`` as follows:
+
+```bash script
+cp ArtixOpenRC-Hyprland/dotfiles/mimeapps.list ~/.config/mimeapps.list
+```
+
 Brave, however, is not installable via Pacman. We must fetch and build it directly from the [Arch User Repository (AUR)](https://aur.archlinux.org/):
 
 ```bash script
@@ -418,3 +424,12 @@ Now comes the moment of truth. To check if everything is in place, run the follo
 ``hyprland``
 
 If all's well, we can move on to the next steps.
+
+### To-Dos
+
+- [ ] Fix Waybar issues.
+- [ ] Set up a hyprlock config file.
+- [ ] Set up hyprpaper wallpaper system.
+- [ ] Set up a nnn config file.
+- [ ] Set up an emacs config file.
+- [ ] Set up a nix config file.
