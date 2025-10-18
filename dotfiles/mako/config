@@ -1,0 +1,52 @@
+# Mako Notification Daemon Configuration
+# Theme: Tokyo Night Dark with cyan accents
+
+# Position and anchor
+anchor=top-right
+margin=10
+padding=12
+
+# Size constraints
+width=320
+height=110
+max-visible=3
+
+# Visual styling
+background-color=#1a1b26
+text-color=#c6d0f5
+border-color=#99d1db
+border-size=1
+border-radius=6
+
+# Typography
+font=SF Pro Text 12
+markup=1
+format=<b>%s</b>\n%b
+
+# Icon settings
+icon-path=/usr/share/icons/Papirus-Dark
+max-icon-size=48
+
+# Behavior
+default-timeout=5000
+ignore-timeout=0
+
+# Progress bar (for volume, brightness, etc.)
+progress-color=over #33467c
+
+# Grouped notifications
+group-by=app-name
+
+# Urgency levels
+[urgency=low]
+border-color=#888888
+default-timeout=3000
+
+[urgency=normal]
+border-color=#99d1db
+default-timeout=5000
+
+[urgency=critical]
+border-color=#e78284
+text-color=#e78284
+default-timeout=0
