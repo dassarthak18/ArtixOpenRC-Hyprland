@@ -403,7 +403,7 @@ The keybinds used in my config are as follows:
 | Move focus up | `SUPER + ↑` |
 | Move focus down | `SUPER + ↓` |
 | **Workspaces** | |
-| Switch to workspace 1-4 | `CTRL + 1/2/3/4` |
+| Switch to workspace 1-4 | `SUPER + 1/2/3/4` |
 | Move window to workspace 1-4 | `SUPER + SHIFT + 1/2/3/4` |
 | **System** | |
 | Lock screen | `SUPER + Q` |
