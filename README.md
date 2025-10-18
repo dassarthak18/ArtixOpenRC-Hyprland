@@ -363,3 +363,59 @@ Similarly, the configuration file for ``fuzzel`` is provided in ``dotfiles/fuzze
 ```bash script
 cp -r ArtixOpenRC-Hyprland/dotfiles/fuzzel ~/.config/fuzzel
 ```
+
+## Setting Up Hyprland
+
+Now that all essential components are ready, it is finally time to actually install and set up Hyprland itself:
+
+```bash script
+sudo pacman -S hyprland xdg-desktop-portal-hyprland polkit-gnome
+```
+
+The package ``xdg-desktop-portal-hyprland`` provides the backend for screen sharing and other desktop integration features, while ``polkit-gnome`` handles authentication prompts for privileged operations.
+
+The configuration file for ``hyprland`` is provided in ``dotfiles/hypr``, which can be copied to ``~/.config/hypr`` as follows:
+
+```bash script
+cp -r ArtixOpenRC-Hyprland/dotfiles/hypr ~/.config/hypr
+```
+
+The keybinds used in my config are as follows:
+
+## Keybindings
+
+| Action | Keybinding |
+| ------ | ---------- |
+| **Applications** | |
+| Launch app launcher (fuzzel) | `SUPER + S` |
+| Launch terminal (alacritty) | `SUPER + T` |
+| Launch browser (brave) | `SUPER + B` |
+| Take screenshot | `SUPER + P` |
+| **Window Management** | |
+| Close focused window | `SUPER + W` |
+| Toggle floating | `SUPER + V` |
+| Toggle fullscreen | `SUPER + F` |
+| Cycle focus (next) | `SUPER + Tab` |
+| Cycle focus (previous) | `SUPER + SHIFT + Tab` |
+| Move focus left | `SUPER + ←` |
+| Move focus right | `SUPER + →` |
+| Move focus up | `SUPER + ↑` |
+| Move focus down | `SUPER + ↓` |
+| **Workspaces** | |
+| Switch to workspace 1-4 | `CTRL + 1/2/3/4` |
+| Move window to workspace 1-4 | `SUPER + SHIFT + 1/2/3/4` |
+| **System** | |
+| Lock screen | `SUPER + Q` |
+| Exit Hyprland | `SUPER + SHIFT + E` |
+| **Mouse/Touchpad** | |
+| Move window | `SUPER + Left Click + Drag` |
+| Resize window | `SUPER + Right Click + Drag` |
+| Switch workspace | Four-finger swipe |
+| Right click | Two-finger tap |
+| Scroll | Two-finger scroll |
+
+Now comes the moment of truth. To check if everything is in place, run the following command:
+
+``hyprland``
+
+If all's well, then we can move on to the next steps.
