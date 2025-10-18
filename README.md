@@ -300,7 +300,7 @@ This installs not only Waybar, but also
 
 The packages ``ttf-font-awesome`` and ``ttf-nerd-fonts-symbols`` are for fonts.
 
-My Waybar config file is provided in ``dotfiles/waybar``. Clone the repository and copy the config files to ``~/.config/waybar`` as follows:
+My Waybar configuration is provided in ``dotfiles/waybar``. Clone the repository and copy the config files to ``~/.config/waybar`` as follows:
 
 ```bash script
 sudo pacman -S git
