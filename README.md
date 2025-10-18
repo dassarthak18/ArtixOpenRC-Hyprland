@@ -19,6 +19,7 @@ So naturally, I dropped the idea (rather, shelved it for some other day).
   - [Setting Up Waybar](#setting-up-waybar)
   - [Configuring Alacritty](#configuring-alacritty)
   - [Essential Software](#essential-software)
+  - [Notifications and App Launcher](#notifications-and-app-launcher)
 
 # Introduction
 This setup was installed on my Thinkpad X250 with Intel i7-5600U (4 cores @ 3.2 GHz) and Intel HD Graphics 5500, 8GB RAM and 256GB SSD.
@@ -313,7 +314,7 @@ cp -r ArtixOpenRC-Hyprland/dotfiles/waybar ~/.config/waybar
 
 ## Configuring Alacritty
 
-Now we configure [Alacritty](https://alacritty.org/), which - as per the latest update - requires us to write TOML files instead of YML. FIrst, we install the font dependencies:
+Now we configure [Alacritty](https://alacritty.org/), which - as per the latest update - requires us to write TOML files instead of YML. First, we install the font dependencies:
 
 ```bash script
 sudo pacman -S ttf-jetbrains-mono-nerd
@@ -342,3 +343,23 @@ makepkg -si
 ```
 
 There are, of course, helpers such as ``yay`` and ``paru`` for AUR that can be installed via Pacman and make things easier for upgrading Brave from time to time (as simple as typing the command ``yay -Sy brave-bin``), but that in my opinion is nothing but additional bloat.
+
+## Notifications and App Launcher
+
+This section is optional. Many minimalist rices avoid using notification daemon or application launchers entirely. However, we're gonna go with ``mako`` for notifications and ``fuzzel`` as our application launcher:
+
+```bash script
+sudo pacman -S mako fuzzel
+```
+
+The configuration file for ``mako`` is provided in ``dotfiles/mako``, which can be copied to ``~/.config/mako`` as follows:
+
+```bash script
+cp -r ArtixOpenRC-Hyprland/dotfiles/mako ~/.config/mako
+```
+
+Similarly, the configuration file for ``fuzzel`` is provided in ``dotfiles/fuzzel``, which can be copied to ``~/.config/fuzzel`` as follows:
+
+```bash script
+cp -r ArtixOpenRC-Hyprland/dotfiles/fuzzel ~/.config/fuzzel
+```
