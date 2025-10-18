@@ -1,0 +1,8 @@
+[Default Applications]
+image/png=feh.desktop
+image/jpeg=feh.desktop
+image/jpg=feh.desktop
+image/gif=feh.desktop
+image/webp=feh.desktop
+image/bmp=feh.desktop
+image/svg+xml=feh.desktop
