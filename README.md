@@ -307,3 +307,17 @@ sudo pacman -S git
 git clone https://github.com/dassarthak18/ArtixOpenRC-Hyprland.git
 cp -r ArtixOpenRC-Hyprland/dotfiles/waybar ~/.config/waybar
 ```
+
+## Configuring Alacritty
+
+Now we configure [Alacritty](https://alacritty.org/), which - as per the latest update - requires us to write TOML files instead of YML. FIrst, we install the font dependencies:
+
+```bash script
+sudo pacman -S ttf-jetbrains-mono-nerd
+```
+
+Then the config file in ``dotfiles/alacritty/alacritty.toml`` can simply be copied to ``~/.config/alacritty`` as follows:
+
+```bash script
+cp -r ArtixOpenRC-Hyprland/dotfiles/alacritty ~/.config/alacritty
+```
