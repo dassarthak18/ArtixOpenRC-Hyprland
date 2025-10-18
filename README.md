@@ -21,6 +21,7 @@ So naturally, I dropped the idea (rather, shelved it for some other day).
   - [Essential Software](#essential-software)
   - [Notifications and App Launcher](#notifications-and-app-launcher)
   - [Setting Up Hyprland](#setting-up-hyprland)
+  	- [Keybindings](#keybindings)
 
 # Introduction
 This setup was installed on my Thinkpad X250 with Intel i7-5600U (4 cores @ 3.2 GHz) and Intel HD Graphics 5500, 8GB RAM and 256GB SSD.
@@ -381,38 +382,36 @@ The configuration file for ``hyprland`` is provided in ``dotfiles/hypr``, which 
 cp -r ArtixOpenRC-Hyprland/dotfiles/hypr ~/.config/hypr
 ```
 
-The keybinds used in my config are as follows:
+### Keybindings
 
-## Keybindings
+| **Category**          | **Action**                                                | **Keybinding**                     |
+| --------------------- | --------------------------------------------------------- | ---------------------------------- |
+| **Applications**      | Launch app launcher *(fuzzel)*                            | `SUPER + S`                        |
+|                       | Launch terminal *(alacritty)*                             | `SUPER + T`                        |
+|                       | Launch browser *(brave)*                                  | `SUPER + B`                        |
+|                       | Screenshot area → save to `~/Pictures/Screenshots`        | `SUPER + P`                        |
+|                       | Screenshot area → copy to clipboard                       | `SUPER + SHIFT + P`                |
+|                       | Screenshot full screen → save to `~/Pictures/Screenshots` | `SUPER + CTRL + P`                 |
+| **Window Management** | Close focused window                                      | `SUPER + W`                        |
+|                       | Lock screen *(hyprlock)*                                  | `SUPER + Q`                        |
+|                       | Toggle floating window                                    | `SUPER + V`                        |
+|                       | Toggle fullscreen                                         | `SUPER + F`                        |
+|                       | Cycle focus (next window)                                 | `SUPER + Tab`                      |
+|                       | Cycle focus (previous window)                             | `SUPER + SHIFT + Tab`              |
+|                       | Move focus left                                           | `SUPER + ←`                        |
+|                       | Move focus right                                          | `SUPER + →`                        |
+|                       | Move focus up                                             | `SUPER + ↑`                        |
+|                       | Move focus down                                           | `SUPER + ↓`                        |
+| **Workspaces**        | Switch to workspace 1–4                                   | `SUPER + 1 / 2 / 3 / 4`            |
+|                       | Move active window to workspace 1–4                       | `SUPER + SHIFT + 1 / 2 / 3 / 4`    |
+|                       | Scroll through workspaces                                 | `SUPER + Mouse Scroll` *(Up/Down)* |
+| **System**            | Exit Hyprland                                             | `SUPER + SHIFT + E`                |
+| **Mouse / Touchpad**  | Move window                                               | `SUPER + Left Click + Drag`        |
+|                       | Resize window                                             | `SUPER + Right Click + Drag`       |
+|                       | Right-click (touchpad)                                    | Two-finger tap                     |
+|                       | Scroll (touchpad)                                         | Two-finger scroll                  |
+|                       | Swipe between workspaces                                  | Three-finger swipe (left/right)    |
 
-| Action | Keybinding |
-| ------ | ---------- |
-| **Applications** | |
-| Launch app launcher (fuzzel) | `SUPER + S` |
-| Launch terminal (alacritty) | `SUPER + T` |
-| Launch browser (brave) | `SUPER + B` |
-| Take screenshot | `SUPER + P` |
-| **Window Management** | |
-| Close focused window | `SUPER + W` |
-| Toggle floating | `SUPER + V` |
-| Toggle fullscreen | `SUPER + F` |
-| Cycle focus (next) | `SUPER + Tab` |
-| Cycle focus (previous) | `SUPER + SHIFT + Tab` |
-| Move focus left | `SUPER + ←` |
-| Move focus right | `SUPER + →` |
-| Move focus up | `SUPER + ↑` |
-| Move focus down | `SUPER + ↓` |
-| **Workspaces** | |
-| Switch to workspace 1-4 | `SUPER + 1/2/3/4` |
-| Move window to workspace 1-4 | `SUPER + SHIFT + 1/2/3/4` |
-| **System** | |
-| Lock screen | `SUPER + Q` |
-| Exit Hyprland | `SUPER + SHIFT + E` |
-| **Mouse/Touchpad** | |
-| Move window | `SUPER + Left Click + Drag` |
-| Resize window | `SUPER + Right Click + Drag` |
-| Right click | Two-finger tap |
-| Scroll | Two-finger scroll |
 
 Now comes the moment of truth. To check if everything is in place, run the following command:
 
