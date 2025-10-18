@@ -280,3 +280,20 @@ play -n synth 1 sine 440
 If we hear a beep sound, we should be fine.
 
 # Installation of Hyprland
+
+## Setting Up Waybar
+
+Before we install and configure Hyprland itself, we must install up Waybar. [Waybar](https://github.com/Alexays/Waybar) provides a highly customizable Wayland bar for compositors like Hyprland. To install Waybar, we run:
+
+```bash script
+sudo pacman -S alacritty waybar blueman pavucontrol nm-connection-editor htop hyprlock
+```
+
+This installs not only Waybar, but also
+
+* ``alacritty`` which is our terminal emulator of choice,
+* ``blueman``, ``pavucontrol`` and ``nm-connection-editor`` which are GUI for configuring bluetooth, audio and network connections respectively,
+* ``htop`` which is our system monitor of choice, and
+* ``hyprlock`` which is the screen locker for Hyprland.
+
+My Waybar config file is provided in ``dotfiles/waybar/config.jsonc``. Clone the repository and move the config file to ``~/.config/waybar/config.jsonc``.
