@@ -411,7 +411,6 @@ The keybinds used in my config are as follows:
 | **Mouse/Touchpad** | |
 | Move window | `SUPER + Left Click + Drag` |
 | Resize window | `SUPER + Right Click + Drag` |
-| Switch workspace | Four-finger swipe |
 | Right click | Two-finger tap |
 | Scroll | Two-finger scroll |
 
