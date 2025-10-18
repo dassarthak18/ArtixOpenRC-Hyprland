@@ -286,17 +286,21 @@ If we hear a beep sound, we should be fine.
 Before we install and configure Hyprland itself, we must install up Waybar. [Waybar](https://github.com/Alexays/Waybar) provides a highly customizable Wayland bar for compositors like Hyprland. To install Waybar, we run:
 
 ```bash script
-sudo pacman -S alacritty waybar blueman pavucontrol nm-connection-editor htop hyprlock
+sudo pacman -S alacritty waybar blueman pavucontrol nm-connection-editor brightnessctl htop hyprlock
+sudo pacman -S ttf-font-awesome ttf-nerd-fonts-symbols
 ```
 
 This installs not only Waybar, but also
 
 * ``alacritty`` which is our terminal emulator of choice,
 * ``blueman``, ``pavucontrol`` and ``nm-connection-editor`` which are GUI for configuring bluetooth, audio and network connections respectively,
+* ``brightnessctl`` which is for controlling the display screen brightness,
 * ``htop`` which is our system monitor of choice, and
 * ``hyprlock`` which is the screen locker for Hyprland.
 
-My Waybar config file is provided in ``dotfiles/waybar/config.jsonc``. Clone the repository and copy the config file to ``~/.config/waybar/config.jsonc`` as follows:
+The packages ``ttf-font-awesome`` and ``ttf-nerd-fonts-symbols`` are for fonts.
+
+My Waybar config file is provided in ``dotfiles/waybar``. Clone the repository and copy the config files to ``~/.config/waybar`` as follows:
 
 ```bash script
 sudo pacman -S git
