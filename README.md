@@ -199,7 +199,7 @@ Following this, we download the essential packages required for the system to fu
 pacman -S grub efibootmgr dialog os-prober dosfstools linux-headers
 pacman -S networkmanager networkmanager-openrc network-manager-applet wpa_supplicant openssh openssh-openrc
 pacman -S bluez bluez-openrc bluez-utils cups cups-openrc
-pacman -S dbus dbus-openrc pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber
+pacman -S dbus dbus-openrc pipewire pipewire-openrc pipewire-alsa pipewire-pulse pipewire-jack wireplumber wireplumber-openrc
 pacman -S mesa mesa-demos xf86-video-intel
 ```
 
@@ -207,7 +207,7 @@ The packages ```grub``` and ```efibootmgr``` serve as the bootloader for our sys
 
 The packages ```networkmanager```, ```networkmanager-openrc```, ```network-manager-applet```and ```wpa_supplicant``` provide the framework and interface for network connectivity, while the packages ```openssh``` and ```openssh-openrc``` provide support for remote login via the SSH protocol. The packages ```bluez```, ```bluez-openrc``` and ```bluez-utils``` provide bluetooth support, while the packages ```cups``` and ```cups-openrc``` provide support for printers and scanners.
 
-The packages ```dbus``` and ```dbus-openrc``` provide the message bus system used for communication between applications and services. The packages ```pipewire```, ```pipewire-alsa```, ```pipewire-pulse``` and ```pipewire-jack``` provide the modern audio and multimedia framework. ```wireplumber``` is the session manager for PipeWire, handling policy and device management to ensure smooth audio routing.
+The packages ```dbus``` and ```dbus-openrc``` provide the message bus system used for communication between applications and services. The packages ```pipewire```, ```pipewire-alsa```, ```pipewire-pulse``` and ```pipewire-jack``` provide the modern audio and multimedia framework. ```wireplumber``` is the session manager for PipeWire, handling policy and device management to ensure smooth audio routing. ``pipewire-openrc`` and ``wireplumber-openrc`` are the respective OpenRC daemons for ``pipewire`` and ``wireplumber``.
 
 Finally, ```mesa``` and ```mesa-demos``` provides OpenGL/Vulkan rendering, while ```xf86-video-intel``` provides plug-and-play drivers for Intel GPU, which is the case for my device. If your device has an AMD GPU, install the package ```xf86-video-amdgpu``` instead. Alternatively, if your device has an Nvidia GPU, you will need the packages ```nvidia``` and ```nvidia-utils```.
 
@@ -218,7 +218,7 @@ grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-We also add the network, SSH, bluetooth, printer and message bus services to our init-system to autostart on boot, that is, at the default runlevel. In ```systemd``` we use the command ```systemctl``` for configuring daemons (background processes; their names usually end with a _d_). But in our case we are using ```openrc```, so our command will be ```rc-update```. Note that other init-systems shipped with Artix (namely ```runit```, ```dinit``` and ```s6```) will vary in their commands for configuring daemons, although the rest of the installation and configuration process remains mostly the same. Also note that ```pipewire``` and ```wireplumber``` are not system services in ```openrc```. Instead, they run per-user when we log into a graphical session such as Hyprland or GNOME.
+We also add the network, SSH, bluetooth, printer and message bus services to our init-system to autostart on boot, that is, at the default runlevel. In ```systemd``` we use the command ```systemctl``` for configuring daemons (background processes; their names usually end with a _d_). But in our case we are using ```openrc```, so our command will be ```rc-update```. Note that other init-systems shipped with Artix (namely ```runit```, ```dinit``` and ```s6```) will vary in their commands for configuring daemons, although the rest of the installation and configuration process remains mostly the same. Also note that ```pipewire``` and ```wireplumber``` are not system-level services but user-level.
 
 ```bash script
 rc-update add NetworkManager default
@@ -228,11 +228,11 @@ rc-update add cupsd default
 rc-update add dbus default
 ```
 
-Upon first login post-install, we will make sure to add the following:
+Upon first login post-install, we will make sure to run the following commands to set up the audio services to run on start-up:
 
 ```bash script
-pgrep -x pipewire >/dev/null || pipewire &
-pgrep -x wireplumber >/dev/null || wireplumber &
+rc-update add pipewire default --user
+rc-update add wireplumber default --user
 ```
 
 to ```~/.bash_profile``` to make sure the audio services autostart on login.
