@@ -301,5 +301,5 @@ My Waybar config file is provided in ``dotfiles/waybar/config.jsonc``. Clone the
 ```bash script
 sudo pacman -S git
 git clone https://github.com/dassarthak18/ArtixOpenRC-Hyprland.git
-cp ArtixOpenRC-Hyprland/dotfiles/waybar/config.jsonc ~/.config/waybar/config.jsonc
+cp -r ArtixOpenRC-Hyprland/dotfiles/waybar ~/.config/waybar
 ```
