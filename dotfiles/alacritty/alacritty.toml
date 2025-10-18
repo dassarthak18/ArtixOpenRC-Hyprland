@@ -1,0 +1,96 @@
+# Alacritty Configuration
+# Theme: Dark with cyan/blue accents
+
+[window]
+opacity = 0.95
+padding.x = 10
+padding.y = 10
+decorations = "None"
+dynamic_title = true
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[font]
+normal.family = "JetBrains Mono Nerd Font"
+normal.style = "Regular"
+bold.family = "JetBrains Mono Nerd Font"
+bold.style = "Bold"
+italic.family = "JetBrains Mono Nerd Font"
+italic.style = "Italic"
+bold_italic.family = "JetBrains Mono Nerd Font"
+bold_italic.style = "Bold Italic"
+size = 11.0
+
+[cursor]
+style.shape = "Block"
+style.blinking = "On"
+blink_interval = 750
+unfocused_hollow = true
+
+[colors]
+# Primary colors
+[colors.primary]
+background = "#1a1b26"  # Dark background matching Waybar
+foreground = "#c6d0f5"  # Light blue-grey text
+dim_foreground = "#a9b1d6"
+
+# Cursor colors
+[colors.cursor]
+text = "#1a1b26"
+cursor = "#99d1db"  # Cyan accent matching Waybar
+
+# Selection colors
+[colors.selection]
+text = "#c6d0f5"
+background = "#33467c"
+
+# Normal colors
+[colors.normal]
+black = "#15161e"
+red = "#e78284"      # Soft red
+green = "#a6d189"    # Soft green
+yellow = "#e5c890"   # Soft yellow
+blue = "#99d1db"     # Cyan accent
+magenta = "#babbf1"  # Soft purple-blue
+cyan = "#99d1db"     # Cyan
+white = "#c6d0f5"    # Light blue-grey
+
+# Bright colors
+[colors.bright]
+black = "#414868"
+red = "#f38ba8"
+green = "#a6e3a1"
+yellow = "#f9e2af"
+blue = "#89dceb"
+magenta = "#cba6f7"
+cyan = "#89dceb"
+white = "#e0e0e0"
+
+# Dim colors
+[colors.dim]
+black = "#15161e"
+red = "#c55555"
+green = "#74b74d"
+yellow = "#c9a554"
+blue = "#6e91b5"
+magenta = "#8d7eaa"
+cyan = "#6e91b5"
+white = "#7f849c"
+
+[bell]
+animation = "EaseOutExpo"
+duration = 100
+
+[selection]
+save_to_clipboard = true
+
+[keyboard]
+bindings = [
+    { key = "V", mods = "Control|Shift", action = "Paste" },
+    { key = "C", mods = "Control|Shift", action = "Copy" },
+    { key = "Plus", mods = "Control", action = "IncreaseFontSize" },
+    { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
+    { key = "Key0", mods = "Control", action = "ResetFontSize" },
+]
