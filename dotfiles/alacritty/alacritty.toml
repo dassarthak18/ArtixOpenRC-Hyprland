@@ -2,7 +2,7 @@
 # Theme: Dark with cyan/blue accents
 
 [window]
-opacity = 0.95
+opacity = 0.85
 padding.x = 10
 padding.y = 10
 decorations = "None"
